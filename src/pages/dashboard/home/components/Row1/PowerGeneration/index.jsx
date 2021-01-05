@@ -1,9 +1,10 @@
+import React from 'react';
 /**
  * 电站发电数据
  * @returns {*}
  */
 export default () => {
-  return (
-    <div>填充图表</div>
-  )
+  return <React.Fragment>
+    
+  </React.Fragment>
 }
