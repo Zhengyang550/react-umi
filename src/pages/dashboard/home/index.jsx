@@ -1,11 +1,12 @@
 import React, {Component,Suspense} from "react";
 
-import Row2 from './components/Row2';
-import Row3 from "./components/Row3";
-import Row4 from "./components/Row4";
 import { GridContent } from '@ant-design/pro-layout';
 import PageLoading from './components/PageLoading';
+
 const Row1 =  React.lazy(()=>import('./components/Row1'));
+const Row2 =  React.lazy(()=>import('./components/Row2'));
+const Row3 =  React.lazy(()=>import('./components/Row3'));
+const Row4 =  React.lazy(()=>import('./components/Row4'));
 
 
 class Monitor extends Component{
