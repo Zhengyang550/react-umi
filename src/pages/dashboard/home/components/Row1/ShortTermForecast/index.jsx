@@ -2,8 +2,14 @@
  * 短期预测上报率
  * @returns {*}
  */
+import { Progress } from 'antd';
+
+
+
 export default () => {
   return (
-    <div>填充图表</div>
+    <div className='ShortTermForecast'>
+      <Progress type="circle" percent={75} />
+    </div>
   )
 }

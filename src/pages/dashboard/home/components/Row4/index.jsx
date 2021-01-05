@@ -2,16 +2,16 @@ import React from "react";
 import { Row, Col,Card } from "antd";
 import { FormattedMessage } from 'umi';
 // import PowerGeneration from './PowerGeneration';
-import ShortTermForecast from './ShortTermForecast';
-import SuperShortTermForecast from './SuperShortTermForecast';
-import WindTowerForecast from './WindTowerForecast';
+import WindSpeedCurve from './WindSpeedCurve';
+import WindSpeedData from './WindSpeedData';
+
 // import PredictioState from './PredictioState';
 
 export default () => {
   return (
     <Row gutter={24}>
       <Col 
-        xl={8}
+        xl={16}
         lg={24}
         md={24}
         sm={24}
@@ -23,12 +23,12 @@ export default () => {
         <Card
           title={
             <FormattedMessage
-              id="dashboardAndhome.home.row1.column1"
+              id="dashboardAndhome.home.row4.column1"
             />
           }
           bordered={false}
         >
-          <ShortTermForecast />
+          <WindSpeedCurve />
         </Card>
       </Col>
 
@@ -45,16 +45,16 @@ export default () => {
         <Card
           title={
             <FormattedMessage
-              id="dashboardAndhome.home.row1.column2"
+              id="dashboardAndhome.home.row4.column2"
             />
           }
           bordered={false}
         >
-          <SuperShortTermForecast />
+          <WindSpeedData />
         </Card>
       </Col>
 
-      <Col 
+      {/* <Col 
         xl={8}
         lg={24}
         md={24}
@@ -67,14 +67,14 @@ export default () => {
         <Card 
           title={
             <FormattedMessage
-              id="dashboardAndhome.home.row1.column3"
+              id="dashboardAndhome.home.row2.column3"
             />
           }
           bordered={false}
         >
-          <WindTowerForecast />
+          <AnemometerData />
         </Card>
-      </Col>
+      </Col> */}
 
       {/* <Col
         xl={5}

@@ -2,9 +2,9 @@ import React from "react";
 import { Row, Col,Card } from "antd";
 import { FormattedMessage } from 'umi';
 // import PowerGeneration from './PowerGeneration';
-import ShortTermForecast from './ShortTermForecast';
-import SuperShortTermForecast from './SuperShortTermForecast';
-import WindTowerForecast from './WindTowerForecast';
+import AnemometerData from './AnemometerData';
+import PowerGeneration from './PowerGeneration';
+import WeatherForecastData from './WeatherForecastData';
 // import PredictioState from './PredictioState';
 
 export default () => {
@@ -23,12 +23,12 @@ export default () => {
         <Card
           title={
             <FormattedMessage
-              id="dashboardAndhome.home.row1.column1"
+              id="dashboardAndhome.home.row2.column1"
             />
           }
           bordered={false}
         >
-          <ShortTermForecast />
+          <PowerGeneration />
         </Card>
       </Col>
 
@@ -45,12 +45,12 @@ export default () => {
         <Card
           title={
             <FormattedMessage
-              id="dashboardAndhome.home.row1.column2"
+              id="dashboardAndhome.home.row2.column2"
             />
           }
           bordered={false}
         >
-          <SuperShortTermForecast />
+          <WeatherForecastData />
         </Card>
       </Col>
 
@@ -67,12 +67,12 @@ export default () => {
         <Card 
           title={
             <FormattedMessage
-              id="dashboardAndhome.home.row1.column3"
+              id="dashboardAndhome.home.row2.column3"
             />
           }
           bordered={false}
         >
-          <WindTowerForecast />
+          <AnemometerData />
         </Card>
       </Col>
 
