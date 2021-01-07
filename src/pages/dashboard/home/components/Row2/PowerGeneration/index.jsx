@@ -21,19 +21,19 @@ const columns = [
 
 const data = [
   {
-    key: '1',
+    keys: '1',
     logo: '',
     power:'实时功率',
     unit: 'MW',
   },
   {
-    key: '2',
+    keys: '2',
     logo: '',
     power:'短期功率预测',
     unit: '15.31MW',
   },
   {
-    key: '3',
+    keys: '3',
     logo: '',
     power:'超短期功率预测',
     unit: '25.11MW',
@@ -42,7 +42,7 @@ const data = [
 ];
 export default () => {
     return (
-      <div><Table  columns={columns}dataSource={data}pagination={false} /></div>
+      <div><Table showHeader={false} columns={columns}dataSource={data}pagination={false} /></div>
     )
   }
   

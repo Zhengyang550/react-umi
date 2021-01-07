@@ -136,7 +136,6 @@ class Analysis extends Component {
           <Suspense fallback={<PageLoading />}>
             <IntroduceRow loading={loading} visitData={visitData} />
           </Suspense>
-
           <Suspense fallback={null}>
             <SalesCard
               rangePickerValue={rangePickerValue}
@@ -147,7 +146,6 @@ class Analysis extends Component {
               selectDate={this.selectDate}
             />
           </Suspense>
-
           <Row
             gutter={24}
             style={{
@@ -176,7 +174,6 @@ class Analysis extends Component {
               </Suspense>
             </Col>
           </Row>
-
           <Suspense fallback={null}>
             <OfflineData
               activeKey={activeKey}
@@ -186,7 +183,6 @@ class Analysis extends Component {
               handleTabChange={this.handleTabChange}
             />
           </Suspense>
-
         </React.Fragment>
       </GridContent>
     );

@@ -42,7 +42,7 @@ const data = [
 ];
 export default () => {
     return (
-      <div><Table  columns={columns}dataSource={data}pagination={false} /></div>
+      <div><Table showHeader={false} columns={columns}dataSource={data}pagination={false} /></div>
     )
   }
   

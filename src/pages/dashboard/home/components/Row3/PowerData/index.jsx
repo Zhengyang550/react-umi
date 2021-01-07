@@ -28,7 +28,7 @@ const columns = [
 
 const data = [
   {
-    key: '1',
+    keyq: '1',
     time: '2019-11-25 14：00：00',
     measured: '27.09',
     supershortterm:'',
@@ -36,7 +36,7 @@ const data = [
     
   },
   {
-    key: '1',
+    keyq: '2',
     time: '2019-11-25 14：00：00',
     measured: '27.09',
     supershortterm:'',
@@ -44,7 +44,7 @@ const data = [
     
   },
   {
-    key: '1',
+    keyq: '3',
     time: '2019-11-25 14：00：00',
     measured: '27.09',
     supershortterm:'',
@@ -52,7 +52,7 @@ const data = [
     
   },
   {
-    key: '1',
+    keyq: '4',
     time: '2019-11-25 14：00：00',
     measured: '27.09',
     supershortterm:'',

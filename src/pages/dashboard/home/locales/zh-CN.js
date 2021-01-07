@@ -3,6 +3,7 @@ export default {
   'dashboardAndhome.home.row1.column1': '短期预测上报率',
   'dashboardAndhome.home.row1.column2': '超短期预测上报率',
   'dashboardAndhome.home.row1.column3': '预测塔预测上报率',
+  'dashboardAndhome.home.row1.column4': '预测状态',
   'dashboardAndhome.home.row2.column1': '电站发电数据',
   'dashboardAndhome.home.row2.column2': '天气预报数据',
   'dashboardAndhome.home.row2.column3': '测风塔数据',

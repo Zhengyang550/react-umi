@@ -33,7 +33,7 @@ const columns = [
 
 const data = [
   {
-    key: '1',
+    keye: '1',
     time: '2019-11-25 14：00：00',
     forecastspeed: '27.09',
     actualspeed:'111',
@@ -41,7 +41,7 @@ const data = [
     
   },
   {
-    key: '1',
+    keye: '2',
     time: '2019-11-25 14：00：00',
     forecastspeed: '27.09',
     actualspeed:'222',
@@ -49,7 +49,7 @@ const data = [
     
   },
   {
-    key: '1',
+    keye: '3',
     time: '2019-11-25 14：00：00',
     forecastspeed: '27.09',
     actualspeed:'11221',
@@ -57,7 +57,7 @@ const data = [
     
   },
   {
-    key: '1',
+    keye: '4',
     time: '2019-11-25 14：00：00',
     forecastspeed: '27.09',
     actualspeed:'1312432',
