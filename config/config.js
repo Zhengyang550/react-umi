@@ -75,6 +75,12 @@ export default defineConfig({
               icon: 'dashboard',
               routes: [
                 {
+                   name:'hightopo',
+                  icon:'smile',
+                  path: '/dashboard/hightopo',
+                  component:'./dashboard/hightopo'
+                },
+                {
                   name:'home',
                   icon:'smile',
                   path: '/dashboard/home',

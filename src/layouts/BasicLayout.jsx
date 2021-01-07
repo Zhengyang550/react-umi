@@ -3,15 +3,16 @@
  * You can view component api by:
  * https://github.com/ant-design/ant-design-pro-layout
  */
-import ProLayout, { DefaultFooter, SettingDrawer } from '@ant-design/pro-layout';
-import React, { useEffect } from 'react';
-import { Link, useIntl, connect, history } from 'umi';
-import { GithubOutlined } from '@ant-design/icons';
-import { Result, Button } from 'antd';
+import ProLayout, {DefaultFooter, SettingDrawer} from '@ant-design/pro-layout';
+import React, {useEffect} from 'react';
+import {Link, useIntl, connect, history} from 'umi';
+import {GithubOutlined} from '@ant-design/icons';
+import {Result, Button} from 'antd';
 import Authorized from '@/utils/Authorized';
 import RightContent from '@/components/GlobalHeader/RightContent';
-import { getAuthorityFromRouter } from '@/utils/utils';
+import {getAuthorityFromRouter} from '@/utils/utils';
 import logo from '../assets/logo.svg';
+
 const noMatch = (
   <Result
     status={403}
@@ -39,7 +40,7 @@ const menuDataRender = (menuList) =>
 
 const defaultFooterDom = (
   <DefaultFooter
-    copyright={`${new Date().getFullYear()} 蚂蚁金服体验技术部出品`}
+    copyright={`${new Date().getFullYear()} 江南大学吴定会出品`}
     links={[
       {
         key: 'Ant Design Pro',
@@ -49,7 +50,7 @@ const defaultFooterDom = (
       },
       {
         key: 'github',
-        title: <GithubOutlined />,
+        title: <GithubOutlined/>,
         href: 'https://github.com/ant-design/ant-design-pro',
         blankTarget: true,
       },
@@ -99,9 +100,11 @@ const BasicLayout = (props) => {
   const authorized = getAuthorityFromRouter(props.route.routes, location.pathname || '/') || {
     authority: undefined,
   };
-  const { formatMessage } = useIntl();
+  const {formatMessage} = useIntl();
   return (
     <>
+      {/*ProLayout 组件 是 Pro v4 中新增的组件，与一般的组件不同，它非常重型，在其中集成了菜单，布局，页头，面包屑，设置抽屉等多种功能。*/}
+      {/*https://pro.ant.design/docs/layout-cn*/}
       <ProLayout
         logo={logo}
         formatMessage={formatMessage}
@@ -133,7 +136,7 @@ const BasicLayout = (props) => {
         }}
         footerRender={() => defaultFooterDom}
         menuDataRender={menuDataRender}
-        rightContentRender={() => <RightContent />}
+        rightContentRender={() => <RightContent/>}
         {...props}
         {...settings}
       >
@@ -141,6 +144,11 @@ const BasicLayout = (props) => {
           {children}
         </Authorized>
       </ProLayout>
+
+      {/*SettingDrawer 提供了一个图形界面来设置 layout 的配置，方便在演示环境中展示 Layout 的所有能力。*/
+      }
+      {/*https://pro.ant.design/docs/layout-cn*/
+      }
       <SettingDrawer
         settings={settings}
         onSettingChange={(config) =>
@@ -150,11 +158,12 @@ const BasicLayout = (props) => {
           })
         }
       />
-    </>
-  );
-};
+      < />
+      )
+      ;
+      };
 
-export default connect(({ global, settings }) => ({
-  collapsed: global.collapsed,
-  settings,
-}))(BasicLayout);
+      export default connect(({global, settings}) => ({
+      collapsed: global.collapsed,
+      settings,
+    }))(BasicLayout);

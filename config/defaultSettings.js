@@ -10,7 +10,7 @@ const proSettings = {
   menu: {
     locale: true,
   },
-  title: 'Ant Design Pro',
+  title: '江南大学',
   pwa: false,
   iconfontUrl: '',
 };
