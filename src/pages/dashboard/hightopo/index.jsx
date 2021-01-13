@@ -4,13 +4,14 @@
  * HT API文档：http://www.hightopo.com/guide/doc/index.html
  * https://www.kancloud.cn/hightopo/structure/463423
  */
-import React, {useState,useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import {GridContent} from '@ant-design/pro-layout';
-import {Card, Form, Tag} from 'antd';
+import {Card, Form, Calendar} from 'antd';
 import StandardFormRow from './components/StandardFormRow';
 import TagSelect from './components/TagSelect';
-import {connect} from 'umi';
+import {connect, FormattedMessage} from 'umi';
 import {SolidCircle} from './components/svg';
+import styles from './styles.less';
 
 const FormItem = Form.Item;
 
@@ -19,7 +20,7 @@ const Articles = ({dispatch, dashboardAndhightopo: {list}, loading}) => {
   const [form] = Form.useForm();
 
   //设置选中所属类目
-   const [selectCategory,setSelectCategory] = useState("1");
+  const [selectCategory, setSelectCategory] = useState("1");
 
   //初始化
   useEffect(() => {
@@ -31,7 +32,7 @@ const Articles = ({dispatch, dashboardAndhightopo: {list}, loading}) => {
     });
   }, []);
 
-  const show = list.map(item=>{
+  const show = list.map(item => {
     return (
       <li key={item.id}>
         <SolidCircle color='green'/>
@@ -69,7 +70,7 @@ const Articles = ({dispatch, dashboardAndhightopo: {list}, loading}) => {
             }}
           >
             <FormItem name="category">
-              <TagSelect expandable  value={selectCategory} onChange={setSelectCategory}>
+              <TagSelect expandable value={selectCategory} onChange={setSelectCategory}>
                 <TagSelect.Option value="1">类目一</TagSelect.Option>
                 <TagSelect.Option value="2">类目二</TagSelect.Option>
                 <TagSelect.Option value="3">类目三</TagSelect.Option>
@@ -92,12 +93,43 @@ const Articles = ({dispatch, dashboardAndhightopo: {list}, loading}) => {
         </Form>
       </Card>
 
-      <Card bordered={false} style={{marginTop:20}}>
+      <Card bordered={false} style={{marginTop: 20}}>
         <ul>
           {show}
         </ul>
       </Card>
     </GridContent>
+
+    <Card bordered={false} style={{marginTop: 20}} title={<FormattedMessage
+      id='dashboardAndhightopo.card.flex'
+      defaultMessage='Flex 布局教程：语法篇'
+    />}>
+      <div className={styles.flex}>
+        <div className={styles.calendar}>
+          <Calendar fullscreen={false}/>
+        </div>
+
+        <div className={styles.calendar}>
+          <Calendar fullscreen={false}/>
+        </div>
+
+        <div className={styles.calendar}>
+          <Calendar fullscreen={false}/>
+        </div>
+
+        <div className={styles.calendar}>
+          <Calendar fullscreen={false}/>
+        </div>
+
+        <div className={styles.calendar}>
+          <Calendar fullscreen={false}/>
+        </div>
+
+        <div className={styles.calendar}>
+          <Calendar fullscreen={false}/>
+        </div>
+      </div>
+    </Card>
   </React.Fragment>
 
 };

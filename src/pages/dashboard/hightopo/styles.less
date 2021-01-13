@@ -1,0 +1,21 @@
+.flex{
+  display:flex;
+  //主轴为水平方向，起点在左端。
+  flex-direction:row;
+  width:100%;
+  background-color:#D9D9D9;
+
+  //flex-wrap属性定义，如果一条轴线排不下，如何换行。 如果不指定 并不会换行
+  flex-wrap: wrap;
+
+  //属性定义了项目在主轴上的对齐方式。 两端对齐，项目之间的间隔都相等。
+  justify-content:space-between;
+
+  //属性定义项目在交叉轴上如何对齐。
+  align-items: center;
+
+  .calendar{
+    margin: 10px 2.5%;
+    width: 20%;
+  }
+}
